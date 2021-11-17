@@ -33,6 +33,8 @@ namespace JenkinsAutobuild.Editor.Settings
         {
             // Get existing open window or if none, make a new one:
             JenkinsSettings window = GetWindow<JenkinsSettings>("JenkinsSettings");
+            window.maxSize = new Vector2(400f, 400f);
+            window.minSize = window.maxSize;
             window.Show();
         }
 
@@ -40,7 +42,7 @@ namespace JenkinsAutobuild.Editor.Settings
         {
             EditorGUILayout.LabelField("Settings");
             EditorGUILayout.Space(15);
-            
+            EditorGUILayout.BeginVertical();
             gitURL = EditorGUILayout.TextField("GIT URL", gitURL);
             //unityVersion = EditorGUILayout.TextField("UNITY VERSION", unityVersion);
             projectName = EditorGUILayout.TextField("PROJECT NAME", projectName);
@@ -48,7 +50,7 @@ namespace JenkinsAutobuild.Editor.Settings
             alias = EditorGUILayout.TextField("ALIAS", alias);
             aliasPass = EditorGUILayout.TextField("ALIAS_PASS", aliasPass);
             keyPass = EditorGUILayout.TextField("KEY_PASS", keyPass);
-
+            EditorGUILayout.EndVertical();
             EditorGUILayout.Space(15);
             EditorGUI.BeginDisabledGroup(IsAllFilds());
             if (GUILayout.Button("Click to copy groovy"))
@@ -62,7 +64,23 @@ namespace JenkinsAutobuild.Editor.Settings
             }
 
             EditorGUI.EndDisabledGroup();
-            
+
+
+            for (int i = 0; i < 1; i++)
+            {
+                Buttons();
+            }
+        }
+
+        private static void Buttons()
+        {
+            EditorGUILayout.BeginHorizontal();
+            GUILayout.Button("1");
+            GUILayout.Button("2", EditorStyles.miniButtonMid);
+            GUILayout.Button("3", EditorStyles.miniButtonRight);
+            GUILayout.Button("4", EditorStyles.miniButton);
+            EditorGUILayout.EndHorizontal();
+            GUILayout.Button("4");
         }
 
         private void Reset()
