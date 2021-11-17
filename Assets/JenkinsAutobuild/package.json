@@ -1,0 +1,14 @@
+{
+  "name": "com.redpenguin.jenkins",
+  "version": "1.0.0",
+  "displayName": "Jenkins Autobuild Setup",
+  "description": "Setup project for CI.",
+  "unity": "2019.1",
+  "keywords": [
+    "jenkins",
+    "pipeline"
+  ],
+  "author": {
+    "name": "Nikita Mironenko"
+  }
+}

@@ -1,0 +1,20 @@
+version: 1
+force:
+  major: 0
+wording:
+  patch:
+    - update
+    - initial
+    - remove
+    - rename
+    - fix
+    - anim
+  minor:
+    - change
+    - improve
+    - feat
+  major:
+    - breaking
+    - release
+  release:
+    - release-candidate
