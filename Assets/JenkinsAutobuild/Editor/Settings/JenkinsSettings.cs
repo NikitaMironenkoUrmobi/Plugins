@@ -18,7 +18,7 @@ namespace JenkinsAutobuild.Editor.Settings
 
         private bool IsAllFilds()
         {
-            return gitURL == string.Empty
+            return GitCorrectCheck(gitURL)
                    || projectName == string.Empty
                    || key == string.Empty
                    || alias == string.Empty
@@ -27,6 +27,10 @@ namespace JenkinsAutobuild.Editor.Settings
                    || unityVersion == string.Empty;
         }
 
+        private static bool GitCorrectCheck(string url)
+        {
+            return !(url.Contains("https://github.com/") && url.Contains(".git"));
+        }
         // Add menu named "My Window" to the Window menu
         [MenuItem("Jenkins/Settings")]
         private static void Init()
@@ -44,6 +48,7 @@ namespace JenkinsAutobuild.Editor.Settings
             EditorGUILayout.Space(15);
             EditorGUILayout.BeginVertical();
             gitURL = EditorGUILayout.TextField("GIT URL", gitURL);
+            if(GitCorrectCheck(gitURL)) EditorGUILayout.HelpBox("Incorrect  git", MessageType.Error);
             //unityVersion = EditorGUILayout.TextField("UNITY VERSION", unityVersion);
             projectName = EditorGUILayout.TextField("PROJECT NAME", projectName);
             key = EditorGUILayout.TextField("KEY NAME", key);
@@ -52,24 +57,20 @@ namespace JenkinsAutobuild.Editor.Settings
             keyPass = EditorGUILayout.TextField("KEY_PASS", keyPass);
             EditorGUILayout.EndVertical();
             EditorGUILayout.Space(15);
-            EditorGUI.BeginDisabledGroup(IsAllFilds());
-            if (GUILayout.Button("Click to copy groovy"))
-            {
-                GUIUtility.systemCopyBuffer = FileSetuper.SetBuildFile(new List<string> {gitURL, unityVersion, projectName, key, alias, aliasPass, keyPass});
-            }
-
+            
             if (GUILayout.Button("File Setup"))
             {
                 FileSetuper.FileSetup();
             }
+            EditorGUILayout.Space(15);
+            EditorGUI.BeginDisabledGroup(IsAllFilds());
+            if (GUILayout.Button("Copy groovy to buffer"))
+            {
+                GUIUtility.systemCopyBuffer = FileSetuper.SetBuildFile(new List<string> {gitURL, unityVersion, projectName, key, alias, aliasPass, keyPass});
+                Debug.Log($"Groovy pipeline copied to buffer.");
+            }
 
             EditorGUI.EndDisabledGroup();
-
-
-            for (int i = 0; i < 1; i++)
-            {
-                Buttons();
-            }
         }
 
         private static void Buttons()

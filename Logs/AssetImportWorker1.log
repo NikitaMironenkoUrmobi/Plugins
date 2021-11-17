@@ -1,0 +1,186 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.14f1 (d0d1bb862f9d) revision 13685179'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1348; Version 2009; 64bit' Language: 'ru' Physical Memory: 16230 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.14f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/Nikita/PluginsCreator
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+56998
+Successfully changed project path to: D:/Nikita/PluginsCreator
+D:/Nikita/PluginsCreator
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 31.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.14f1 (d0d1bb862f9d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Nikita/PluginsCreator/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 630 (ID=0x3e92)
+    Vendor:   
+    VRAM:     8115 MB
+    Driver:   27.20.100.8681
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001880 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 30.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.685 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1685ms)
+		BeginReloadAssembly (57ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (374ms)
+			LoadAssemblies (55ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (139ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (143ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (30ms)
+				BeforeProcessingInitializeOnLoad (9ms)
+				ProcessInitializeOnLoadAttributes (75ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002369 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 30.23 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.882 seconds
+Domain Reload Profiling:
+	ReloadAssembly (883ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (677ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (217ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (223ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (30ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (93ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1723 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.8 MB.
+System memory in use after: 82.7 MB.
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2159.
+Total: 2.145000 ms (FindLiveObjects: 0.141600 ms CreateObjectMapping: 0.051600 ms MarkObjects: 1.837700 ms  DeleteObjects: 0.113400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/JenkinsAutobuild/Editor/Settings/JenkinsSettings.cs
+  artifactKey: Guid(e1cbf79b00e44beb809e606d3ab5da8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JenkinsAutobuild/Editor/Settings/JenkinsSettings.cs using Guid(e1cbf79b00e44beb809e606d3ab5da8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa93345faad11072ab789ce535d385e') in 0.039845 seconds 
+  Import took 0.042306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009859 seconds.
+  path: Assets/JenkinsAutobuild/Resources/semver-gen
+  artifactKey: Guid(e76473376d3e81e4f9b14c1d128ecf54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JenkinsAutobuild/Resources/semver-gen using Guid(e76473376d3e81e4f9b14c1d128ecf54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b314473efff48d68b40547a47885ac8f') in 0.011989 seconds 
+  Import took 0.014422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002742 seconds.
+  path: Assets/JenkinsAutobuild/Resources
+  artifactKey: Guid(08f6c36aacba5e34ab938f0b6cd47e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JenkinsAutobuild/Resources using Guid(08f6c36aacba5e34ab938f0b6cd47e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47a5e1912c519fadb9107b55ba279740') in 0.018161 seconds 
+  Import took 0.020614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002806 seconds.
+  path: Assets/JenkinsAutobuild/Editor/Settings
+  artifactKey: Guid(8b0f999d9a0b4435a544856ddc1e6c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JenkinsAutobuild/Editor/Settings using Guid(8b0f999d9a0b4435a544856ddc1e6c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eef90856a30be86ec507821e62ef368e') in 0.005205 seconds 
+  Import took 0.007738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006613 seconds.
+  path: Assets/JenkinsAutobuild/Editor/Settings/FileSetuper.cs
+  artifactKey: Guid(f4fe7c35f1144ea0bf5e9c648cd996c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JenkinsAutobuild/Editor/Settings/FileSetuper.cs using Guid(f4fe7c35f1144ea0bf5e9c648cd996c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e9e587709ff6fa61bc47d58a898e7a') in 0.006088 seconds 
+  Import took 0.008712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004392 seconds.
+  path: Assets/JenkinsAutobuild/Resources/semver.yaml
+  artifactKey: Guid(5b3db4322ea8c1b4a8202a6f4df3aab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JenkinsAutobuild/Resources/semver.yaml using Guid(5b3db4322ea8c1b4a8202a6f4df3aab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6a3c7f619d8fc4d6d232c0e4365af68') in 0.006702 seconds 
+  Import took 0.009095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006224 seconds.
+  path: Assets/JenkinsAutobuild/Resources/build.groovy
+  artifactKey: Guid(3e55425be93ef5846a792f923b733658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JenkinsAutobuild/Resources/build.groovy using Guid(3e55425be93ef5846a792f923b733658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f686e5b216c713a63d362ad5586023a0') in 0.007334 seconds 
+  Import took 0.009733 seconds .
+

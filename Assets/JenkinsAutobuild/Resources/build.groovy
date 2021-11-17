@@ -82,7 +82,7 @@ pipeline{
                 string BUILD_PATH="${WORKING_DIRECTORY}/${BUILD_DIR}/"
                 string KEYSTORE_PATH="${WORKING_DIRECTORY}/Keystore/${KEY_NAME}"
                 string FILE_NAME="${PROJECT_NAME}:${APP_VERSION}"
-                sh '''cd Assets && nuget restore && cd ..'''
+                //sh '''cd Assets && nuget restore && cd ..'''
                 
                 }
                 script{

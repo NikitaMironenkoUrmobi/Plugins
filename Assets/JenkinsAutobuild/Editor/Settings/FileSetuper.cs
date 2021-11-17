@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace JenkinsAutobuild.Editor.Settings
     public static class FileSetuper
     {
         private static string _buildPath;
+        private static string _resourcesPath;
         // private static readonly string JenkinsBuilds = $"{BuildPath}/JenkinsBuilds";
         // private static readonly string JenkinsLog = $"{BuildPath}/JenkinsLog";
         // private static readonly string Keystore = $"{BuildPath}/Keystore";
@@ -32,11 +34,12 @@ namespace JenkinsAutobuild.Editor.Settings
         }; 
         private static readonly List<string> SemVerFiles = new List<string>
         {
-            $"{Application.dataPath}/Packages/JenkinsAutobuild/Resources/Semver/semver.yaml",
-            $"{Application.dataPath}/Packages/JenkinsAutobuild/Resources/Semver/semver-gen"
+            $"{Application.dataPath}/JenkinsAutobuild/Resources/semver.yaml",
+            $"{Application.dataPath}/JenkinsAutobuild/Resources/semver-gen"
+            //"semver.yaml",
+            //"semver-gen"
         };  
         
-        [MenuItem("Jenkins/File Setup")]
         public static void FileSetup()
         {
             _buildPath = $"{Application.dataPath}".Replace("/Assets", "");
@@ -46,21 +49,37 @@ namespace JenkinsAutobuild.Editor.Settings
                 SetVisibleToGit(folderPath);
             }
 
-            var files = Resources.LoadAll<TextAsset>("Semver").ToList();
-            
-            Debug.Log(files.Count);
-            foreach (var file in SemVerFiles)
+            // FindPath();
+            // foreach (var fileName in SemVerFiles)
+            // {
+            //     var newFilePath = $"{_resourcesPath}/{fileName}";
+            //     if(File.Exists(newFilePath)) continue;
+            //     FileUtil.CopyFileOrDirectory(newFilePath, $"{_buildPath}/{fileName}");
+            // }
+            foreach (var filePath in SemVerFiles)
             {
-                if(File.Exists(file)) continue;
-                var fileName = file.Split('/').Last();
-                FileUtil.CopyFileOrDirectory(file, $"{_buildPath}/{fileName}");
+                var fileName = filePath.Split('/').Last();
+                var newPath = $"{_buildPath}/{fileName}";
+                if(File.Exists(newPath)) continue;
+                FileUtil.CopyFileOrDirectory(filePath, newPath);
             }
+            Debug.Log($"Files were created!");
+        }
+
+        private static void FindPath()
+        {
+            //if(_resourcesPath != string.Empty) return;
+            //_resourcesPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //_resourcesPath = Directory.GetCurrentDirectory();
+            var semverYaml = Resources.Load("semver.yaml");
+            _resourcesPath =  AssetDatabase.GetAssetPath(semverYaml).Replace("/semver.yaml","");
+            Debug.Log(_resourcesPath);
         }
 
         public static string SetBuildFile(List<string> list)
         {
-            //var buildFile = Resources.LoadAll<TextAsset>("BuildPipeline").First();
-            var buildFile = File.ReadAllText($"{Application.dataPath}/Packages/JenkinsAutobuild/Resources/BuildPipeline/build.groovy");
+            //FindPath();
+            var buildFile = File.ReadAllText($"{Application.dataPath}/JenkinsAutobuild/Resources/build.groovy");
             var str = buildFile;
             for (int i = 0; i < ReplaceOrder.Count; i++)
             {
